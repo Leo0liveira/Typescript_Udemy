@@ -18,3 +18,12 @@ greeting(firstName)
 // greeting(anotherName)
 // greeting(x)
 
+
+/**
+ * * Desafio 01
+ */
+
+function somaNumbers(soma1:number, soma2:number){
+    return soma1 + soma2
+}
+console.log(somaNumbers(2,3))
