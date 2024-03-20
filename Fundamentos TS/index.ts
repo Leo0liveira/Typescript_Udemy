@@ -46,3 +46,18 @@ let inf = "Teste"
  /** Comandos TS
   * TODO: tsc --init / tsc -w 
   */
+
+ /**
+ * * Desafio 02 
+ * 1. Crie uma variavel que recebe um número
+ * 2. Converta o numero para string em uma nova variavel
+ * 3. Esta varaivel de conversão deve estar tipada por inferência
+ * 4. Imprima o numero em uma string maior, utilizando template string ou concatenação
+*/
+
+const numero: number = 100
+const converted = numero.toString()
+const biggerString = `O número convertido para string é: ${converted}`
+
+console.log(biggerString)
+
