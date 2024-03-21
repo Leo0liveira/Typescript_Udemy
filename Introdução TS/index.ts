@@ -3,7 +3,7 @@ const anotherName = 1
 const x = true
 
 /** 
- * * Ininciando criação de tipagem
+ * * Ininciando criação de tipagem dasdasdasd
  */
 
 function greeting(name:string){
