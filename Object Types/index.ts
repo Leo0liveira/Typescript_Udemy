@@ -17,10 +17,35 @@ function showProductDetails(product: Product){
    }
 }
 
-const shirt:Product ={
+const shirt:Product = {
   name:"Camisa",
   price:19.99,
   isAvailable: true
 }
 
 showProductDetails(shirt)
+
+/**
+ * TODO: Propriedades opcionais em interfaces
+ * - As interfaces podem conter propriedades de objeto opcionais
+ * - Basta adicionar a interrogação no nome da prop
+ * - nome?: string
+ */
+
+interface User {
+  email: string
+  role?: string
+}
+
+function showUserDetails(user: User) {
+  console.log(`E-mail do usuário: ${user.email}`)
+  if (user.role) {
+    console.log(`Sua função no sistema é de: ${user.role}`)
+  }
+}
+
+const u1 = { email: 'leonardo@teste.com', role: 'Admin' }
+const u2 = { email: 'joao@teste.com' }
+
+showUserDetails(u1)
+showUserDetails(u2)
