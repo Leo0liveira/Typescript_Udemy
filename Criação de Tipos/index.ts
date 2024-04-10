@@ -125,3 +125,17 @@ function showTruckKm(km: Km) {
 
 showTruckKm(newTruck.km)
 
+/**
+ * TODO: Condicional Exp Types
+ * - O tipo por condição permite criar um novo tipo com base em um if/else
+ * - Mas não são aceitas expressões tão amplas
+ * - Utilizamos a sintaxe de if ternário 
+ */
+interface A {}
+
+interface B extends A {}
+
+type myType = B extends A ? number : string
+
+const someVar: myType = 1
+// const someVar2: myType = 'asd'

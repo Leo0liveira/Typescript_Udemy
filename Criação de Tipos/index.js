@@ -69,3 +69,5 @@ function showTruckKm(km) {
     console.log(`O caminhão já rodou ${km} kms`);
 }
 showTruckKm(newTruck.km);
+const someVar = 1;
+// const someVar2: myType = 'asd'
