@@ -119,3 +119,9 @@ const newTruck: Truck = {
   kg: 5000,
   description: 'Caminhão para pouca carga',
 }
+function showTruckKm(km: Km) {
+  console.log(`O caminhão já rodou ${km} kms`)
+}
+
+showTruckKm(newTruck.km)
+
