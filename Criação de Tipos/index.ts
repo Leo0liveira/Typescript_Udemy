@@ -48,3 +48,20 @@ const myPen: Pen = { name: 'Caneta Bic', wheels: false, engine: false }
 
 console.log(myCar)
 console.log(myPen)
+
+/**
+ * TODO: Type parameters
+ * - Type parameters é um recurso de Generics
+ * - Utilizado para dizer que algum parâmetro de uma função, por exemplo, é a chave de um objeto, que também é parâmetro
+ * - Desta maneira conseguimos criar uma ligação entre o tipo genérico e sua chave
+ */
+function getSomeKey<T, K extends keyof T>(obj: T, key: K) {
+  return `A chave ${key} tem o valor ${obj[key]}`
+}
+
+const server = {
+  hd: '2TB',
+  ram: '32GB',
+}
+
+console.log(getSomeKey(server, 'ram'))
