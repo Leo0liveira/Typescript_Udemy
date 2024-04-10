@@ -159,3 +159,23 @@ myArray = myArray.map((item) => {
 })
 
 console.log(myArray)
+
+/**
+ * TODO: Tuplas
+ * - Tuplas é um tipo de array, porém definimos a quantidade e o tipo de elementos
+ * - Basicamente criamos um novo type, e nele inserimos um array com os tipos necessários
+ * - Cada tipo conta também como um elemento
+ */
+type fiveNumbers = [number, number, number, number, number]
+
+const myNumberArray: fiveNumbers = [1, 2, 3, 4, 5]
+// const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]
+// const mixedArray: fiveNumbers = ["teste", 1]
+
+type nameAndAge = [string, number]
+
+const anotherUser = ['Matheus', 30]
+
+anotherUser[1] = 'João'
+
+console.log(anotherUser)
