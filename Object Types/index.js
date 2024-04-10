@@ -26,3 +26,7 @@ const u1 = { email: 'leonardo@teste.com', role: 'Admin' };
 const u2 = { email: 'joao@teste.com' };
 showUserDetails(u1);
 showUserDetails(u2);
+const fusca = {
+    brand: 'Vw',
+    wheels: 4,
+};

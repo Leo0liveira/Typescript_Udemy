@@ -49,3 +49,19 @@ const u2 = { email: 'joao@teste.com' }
 
 showUserDetails(u1)
 showUserDetails(u2)
+
+/**
+ * TODO: Readonly
+ * - As propriedades readonly podem ser altyeradas apenas uma vez, na criação do novo dado
+ * - É uma forma de criar um valor constante em um objeto
+ * - Podemos adicionar as interfaces
+ */
+interface Car {
+  brand: string
+  readonly wheels: number
+}
+
+const fusca: Car = {
+  brand: 'Vw',
+  wheels: 4,
+}
