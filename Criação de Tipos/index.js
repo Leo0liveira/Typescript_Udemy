@@ -45,9 +45,18 @@ function showCharName(obj, name) {
     return `${obj[name]}`;
 }
 const myChar = {
-    name: 'Matheus',
-    age: 30,
-    hasDriveLicense: true,
+    name: 'Leonardo',
+    age: 24,
+    hasDriveLicense: false,
 };
 console.log(showCharName(myChar, 'name'));
 // console.log(showCharName([0]))
+/**
+ * TODO: TypeOf Operator
+ * - Com o typeOf Type Operator podemos criar um novo tipo
+ * - Este tipo será baseado no tipo de algum dado
+ * - Ou seja, é interessante para quando queremos criar uma váriavél com o mesmo tipo da outra
+ */
+const userName = 'Leonardo';
+const userName2 = 'João';
+const userName4 = 'Joaquim';

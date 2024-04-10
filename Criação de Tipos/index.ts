@@ -81,10 +81,26 @@ function showCharName(obj: Character, name: C): string {
 }
 
 const myChar: Character = {
-  name: 'Matheus',
-  age: 30,
-  hasDriveLicense: true,
+  name: 'Leonardo',
+  age: 24,
+  hasDriveLicense: false,
 }
 
 console.log(showCharName(myChar, 'name'))
 // console.log(showCharName([0]))
+
+/**
+ * TODO: TypeOf Operator
+ * - Com o typeOf Type Operator podemos criar um novo tipo
+ * - Este tipo será baseado no tipo de algum dado
+ * - Ou seja, é interessante para quando queremos criar uma váriavél com o mesmo tipo da outra
+ */
+const userName: string = 'Leonardo'
+
+const userName2: typeof userName = 'João'
+
+// const userName3: typeof userName = 3
+
+type x = typeof userName
+
+const userName4: x = 'Joaquim'
