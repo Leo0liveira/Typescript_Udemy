@@ -34,10 +34,20 @@ console.log(myPen);
  * - Desta maneira conseguimos criar uma ligação entre o tipo genérico e sua chave
  */
 function getSomeKey(obj, key) {
-    return `A chave ${key} tem o valor ${obj[key]}`;
+    // return `A chave ${key} tem o valor ${obj[key]}`
 }
 const server = {
     hd: '2TB',
     ram: '32GB',
 };
 console.log(getSomeKey(server, 'ram'));
+function showCharName(obj, name) {
+    return `${obj[name]}`;
+}
+const myChar = {
+    name: 'Matheus',
+    age: 30,
+    hasDriveLicense: true,
+};
+console.log(showCharName(myChar, 'name'));
+// console.log(showCharName([0]))

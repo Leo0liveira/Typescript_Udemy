@@ -56,7 +56,7 @@ console.log(myPen)
  * - Desta maneira conseguimos criar uma ligação entre o tipo genérico e sua chave
  */
 function getSomeKey<T, K extends keyof T>(obj: T, key: K) {
-  return `A chave ${key} tem o valor ${obj[key]}`
+  // return `A chave ${key} tem o valor ${obj[key]}`
 }
 
 const server = {
@@ -65,3 +65,26 @@ const server = {
 }
 
 console.log(getSomeKey(server, 'ram'))
+
+/**
+ * TODO: KeyOf Type Operator
+ * - Com o keyOf Type operator podemos criar um novo tipo
+ * - Ele aceita dados do tipo objeto, como object literals e arrays
+ * - E pode criar o tipo baseado nas chaves do objeto passado como parâmetro
+ */
+type Character = { name: string; age: number; hasDriveLicense: boolean }
+
+type C = keyof Character
+
+function showCharName(obj: Character, name: C): string {
+  return `${obj[name]}`
+}
+
+const myChar: Character = {
+  name: 'Matheus',
+  age: 30,
+  hasDriveLicense: true,
+}
+
+console.log(showCharName(myChar, 'name'))
+// console.log(showCharName([0]))
