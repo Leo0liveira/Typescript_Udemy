@@ -138,3 +138,24 @@ const arnold: HumanWithGun = {
 }
 
 console.log(arnold)
+
+/**
+ * TODO: ReadOnly Arrays
+ * - O ReadOnly Arrays é um tipo para arrays, que deixa os itens como readonly
+ * - Podemos aplicar um tipo para os itens do array, além desta propriedade especial
+ * - A modificação de itens pode ser feita através de método, mas não podemos aumentar o array, por exemplo
+ */
+
+let myArray: ReadonlyArray<string> = ['Maçã', 'Laranja', 'Pêra']
+
+// myArray[3] = 'Mamão'
+
+myArray.forEach((item) => {
+  console.log('Fruta: ' + item)
+})
+
+myArray = myArray.map((item) => {
+  return `Fruta: ${item}`
+})
+
+console.log(myArray)
