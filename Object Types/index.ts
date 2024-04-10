@@ -90,3 +90,26 @@ interface OnlyNumberArray {
 }
 
 const arr1: OnlyNumberArray = [1, 2, 3]
+
+/**
+ * TODO: Extending Types
+ * - Utilizamos Extending Types como uma herança para criar tipos mais complexos por meio de uma interface
+ * - Ou seja, uma interface pode herdar as propriedades e tipos já definidos de outra
+ * - Isso acontece por meio da instrução extends
+ */
+interface Human {
+  name: string
+  age: number
+}
+
+interface SuperHuman extends Human {
+  superpowers: string[]
+}
+
+const goku: SuperHuman = {
+  name: 'Goku',
+  age: 50,
+  superpowers: ['Kamehameha', 'Genki Dama'],
+}
+
+console.log(goku)

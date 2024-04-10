@@ -37,3 +37,9 @@ let coords = {
 coords.y = 15;
 console.log(coords);
 const arr1 = [1, 2, 3];
+const goku = {
+    name: 'Goku',
+    age: 50,
+    superpowers: ['Kamehameha', 'Genki Dama'],
+};
+console.log(goku);
