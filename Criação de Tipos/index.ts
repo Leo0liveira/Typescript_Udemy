@@ -9,3 +9,21 @@ function showData<T>(arg: T): string {
 
 console.log(showData(5))
 console.log(showData('teste'))
+
+/**
+ * TODO: Constraint Generics
+ * - As constraint nos ajudam a limitar os tipos aceitos
+ * - Como em generic podemos ter tipos livres, elas vão filtrar os tipos aceitos
+ * - Adicionando organização quando queremos aproveitar a liberdade dos Generics
+ */
+function showProductName<T extends { name: string }>(obj: T) {
+  return `O nome do produto é: ${obj.name}`
+}
+
+const myObj = { name: 'Porta', cor: 'Branca' }
+const secondObj = { name: 'Carro', rodas: 4 }
+const thirdObj = { price: 19.99, qty: 10 }
+
+console.log(showProductName(myObj))
+console.log(showProductName(secondObj))
+// console.log(showProductName(thirdObj))
