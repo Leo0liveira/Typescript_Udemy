@@ -27,3 +27,24 @@ const thirdObj = { price: 19.99, qty: 10 }
 console.log(showProductName(myObj))
 console.log(showProductName(secondObj))
 // console.log(showProductName(thirdObj))
+
+/**
+ * TODO: Interface com Generics
+ * - Com interfaces podemos criar tipos complexos para objetos
+ * - Adicionando Generics podemos deixá-los mais brandos
+ * - Aceitando tipos diferentes em ocasiões diferentes
+ */
+interface MyObject<T, U> {
+  name: string
+  wheels: T
+  engine: U
+}
+
+type Car = MyObject<number, number>
+type Pen = MyObject<boolean, boolean>
+
+const myCar: Car = { name: 'Fusca', wheels: 4, engine: 1 }
+const myPen: Pen = { name: 'Caneta Bic', wheels: false, engine: false }
+
+console.log(myCar)
+console.log(myPen)
