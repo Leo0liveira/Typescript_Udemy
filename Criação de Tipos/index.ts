@@ -139,3 +139,15 @@ type myType = B extends A ? number : string
 
 const someVar: myType = 1
 // const someVar2: myType = 'asd'
+
+/**
+ * TODO: Template Literals Type
+ * - Podemos criar tipos com Templates literals
+ * - É uma forma de customizar tipos de maneiras infinitas
+ * - Pois o texto que formamos pode depender de variáveis
+ */
+type TestA = "text"
+
+type CustomType = `some ${TestA}`
+
+const testing: CustomType = "some text"

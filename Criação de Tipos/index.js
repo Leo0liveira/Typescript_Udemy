@@ -70,4 +70,4 @@ function showTruckKm(km) {
 }
 showTruckKm(newTruck.km);
 const someVar = 1;
-// const someVar2: myType = 'asd'
+const testing = "some text";
