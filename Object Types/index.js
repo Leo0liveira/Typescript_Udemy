@@ -68,3 +68,16 @@ const myNumberArray = [1, 2, 3, 4, 5];
 const anotherUser = ['Matheus', 30];
 anotherUser[1] = 'João';
 console.log(anotherUser);
+/**
+ * TODO: Tuplas com ReadOnly
+ * - Podemos criar tuplas com a propriedade de readonly
+ * - É um tipo de dado super restrito, pois:
+ * - Limita quantos itens teremos, qual é o tipo de cada um e também não são modificáveis
+ */
+function showNumbers(numbers) {
+    // numbers[0] = 10
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);
+// showNumbers(['teste', 1])
