@@ -30,3 +30,10 @@ const fusca = {
     brand: 'Vw',
     wheels: 4,
 };
+let coords = {
+    x: 10,
+};
+// coords.y = 'teste'
+coords.y = 15;
+console.log(coords);
+const arr1 = [1, 2, 3];

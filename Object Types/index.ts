@@ -65,3 +65,28 @@ const fusca: Car = {
   brand: 'Vw',
   wheels: 4,
 }
+
+/**
+ * TODO: Index Signature
+ * - Utilizamos o Index signature quando não sabemos o nome das chaves, mas já sabemos quais os tipos de um objeto ou array
+ * - Isso restringe a tipos que não devem ser utilizados
+ * - Uma barreira de segurança a mais na nossa variavel
+ */
+interface CoordObject {
+  [index: string]: number
+}
+
+let coords: CoordObject = {
+  x: 10,
+}
+
+// coords.y = 'teste'
+coords.y = 15
+
+console.log(coords)
+
+interface OnlyNumberArray {
+  [index: number]: number
+}
+
+const arr1: OnlyNumberArray = [1, 2, 3]
