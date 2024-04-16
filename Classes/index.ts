@@ -45,3 +45,30 @@ const fusca = new Car("Fusca")
 console.log(fusca)
 fusca.name = "Camaro"
 // fusca.wheels = 5
+
+/**
+ * TODO: Herança e Super
+ * Para gerar uma herança utilizamos a palabra reservada "extends"
+ * Será preciso passar as propriedades da classe pai para ela quando instanciarmos um objeto
+ * Isso será feito com a função super
+ */
+class Machine{
+  name
+  constructor(name:string){
+    this.name = name
+  }
+}
+const trator = new Machine("Trator")
+
+class killerMachine extends Machine{
+  guns
+
+  constructor(name:string, guns:number){
+    super(name)
+    this.guns = guns
+  }
+}
+const destroyer = new killerMachine("Destroyer",4)
+console.log("machine: "+trator, "killerMachine: "+destroyer)
+
+
