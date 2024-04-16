@@ -165,3 +165,23 @@ myCoords.fillX = 155
 myCoords.fillY = 12312
 
 console.log(myCoords.getCoords)
+
+ /**
+ * TODO: Herença em Interface
+ * Para herdar usamos a instrução "Implements"
+ * Utilizada para criar métodos que várias classes terão em comum
+ */
+ interface showTitle {
+  itemTitle(): string
+}
+class blogPost implements showTitle {
+  title
+  constructor(title: string) {
+    this.title = title
+  }
+  itemTitle() {
+    return `O título do post é: ${this.title}`
+  }
+}
+const myPost = new blogPost("Hello World")
+console.log(myPost.itemTitle())

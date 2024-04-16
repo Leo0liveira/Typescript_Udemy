@@ -137,3 +137,13 @@ const myCoords = new Coords();
 myCoords.fillX = 155;
 myCoords.fillY = 12312;
 console.log(myCoords.getCoords);
+class blogPost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O título do post é: ${this.title}`;
+    }
+}
+const myPost = new blogPost("Hello World");
+console.log(myPost.itemTitle());
