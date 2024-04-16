@@ -89,3 +89,24 @@ const gimli = new dwarf("Gimli")
 console.log(gimli.name)
 gimli.greeting()
 console.log(gimli)
+
+/**
+ * TODO: This
+ * Usada para se referir ao objeto em si
+ * Acessar suas propriedades
+ * Da mesma forma ao JavaScript
+ */
+ class Truck{
+  model
+  hp
+
+  constructor(model:string, hp:number){
+    this.model = model
+    this.hp = hp
+  }
+  showDetails(){
+    console.log(`Caminhão do modelo: ${this.model}, que tem ${this.hp} cavalos de potência`)
+  }
+ }
+ const volvo = new Truck("volvo", 400)
+ volvo.showDetails()
