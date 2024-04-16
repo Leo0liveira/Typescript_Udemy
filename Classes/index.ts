@@ -110,3 +110,23 @@ console.log(gimli)
  }
  const volvo = new Truck("volvo", 400)
  volvo.showDetails()
+
+ /**
+ * TODO: Getters
+ * Os getters são uma ferramenta de retornar propriedades do objeto
+ * Podemos modificá-las neste retorno
+ * É um método para ler propriedades
+ */
+class Person{
+  name
+  surname
+  constructor(name:string, surname:string){
+    this.name = name
+    this.surname = surname
+  }
+  get fullName(){
+    return this.name + " " + this.surname
+  }
+}
+const leonardo = new Person("Leonardo", "Oliveira")
+console.log(leonardo.fullName)

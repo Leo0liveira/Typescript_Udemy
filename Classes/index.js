@@ -91,3 +91,20 @@ class Truck {
 }
 const volvo = new Truck("volvo", 400);
 volvo.showDetails();
+/**
+* TODO: Getters
+* Os getters são uma ferramenta de retornar propriedades do objeto
+* Podemos modificá-las neste retorno
+* É um método para ler propriedades
+*/
+class Person {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    get fullName() {
+        return this.name + " " + this.surname;
+    }
+}
+const leonardo = new Person("Leonardo", "Oliveira");
+console.log(leonardo.fullName);
