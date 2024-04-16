@@ -1,0 +1,1 @@
+export const x = "váriavel de importação"
