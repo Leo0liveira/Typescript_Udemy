@@ -57,3 +57,20 @@ class killerMachine extends Machine {
 }
 const destroyer = new killerMachine("Destroyer", 4);
 console.log("machine: " + trator, "killerMachine: " + destroyer);
+/**
+ * TODO: Métodos
+ * Métodos são como funções da classe
+ * Podemos criá-los junto das classes e os objetovs podem utilizá-los
+ */
+class dwarf {
+    constructor(name) {
+        this.name = name;
+    }
+    greeting() {
+        console.log("Hey you fool!");
+    }
+}
+const gimli = new dwarf("Gimli");
+console.log(gimli.name);
+gimli.greeting();
+console.log(gimli);
