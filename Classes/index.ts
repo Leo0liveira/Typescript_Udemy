@@ -185,3 +185,242 @@ class blogPost implements showTitle {
 }
 const myPost = new blogPost("Hello World")
 console.log(myPost.itemTitle())
+
+ /**
+ * TODO: Override
+ * Usado para substituir um método de uma classe que herdamos algo
+ */
+class Base {
+  someMethod() {
+    console.log("Alguma coisa!")
+  }
+}
+
+class Nova extends Base {
+  someMethod() {
+    console.log("Outra coisa!")
+  }
+}
+
+const myNewClass = new Nova()
+
+myNewClass.someMethod()
+
+ /**
+ * TODO: Visibilidade - Public
+ * Connceito de expor nosssos métodos de classes
+ * public > visibilidade default, pode ser acessado de qualquer lugar
+ * protected > acessível apenas a subclassee da classe do método
+ * private > apenas a classe que declarou o método pode utilizar
+ */
+class C {
+  public x = 10
+}
+
+const cInstance = new C()
+
+console.log(cInstance.x)
+
+/**
+ * TODO: Visibilidade - Protected
+ * Podem ser utilizados apenas em subclasses
+ * Uma propriedade só pode ser acessada por um método
+ * O mesmo acontece com os métodos, adicionando uma camada de segurança ao código criado em uma classe
+ */
+class D {
+  protected x = 10
+
+  protected protectedMethod() {
+    console.log("Estou protegido!")
+  }
+}
+
+class E extends D {
+
+  showX() {
+    console.log("X: " + this.x)
+  }
+
+  useMethod() {
+    this.protectedMethod()
+  }
+
+}
+
+class F extends D {
+}
+
+const eInstance = new E()
+
+eInstance.showX()
+
+eInstance.useMethod()
+
+const fInstance = new F()
+
+// fInstance.showX()
+
+/**
+ * TODO: Visibilidade - Private
+ * Os itens private, propriedades e objetos, só podem ser acessados na class que os definiu
+ * E ainda precisam de métodos para serem acessados
+ * Esta é a maior proteção para propriedades e métodos
+ */
+class PrivateClass {
+  private name = "Private"
+
+  showName() {
+    console.log(this.name)
+  }
+
+  private privateMethod() {
+    console.log("Sou privado!")
+  }
+
+  showPrivateMethodResult() {
+    this.privateMethod()
+  }
+}
+
+const pClass = new PrivateClass()
+
+pClass.showName()
+
+pClass.showPrivateMethodResult()
+
+// class TestingPrivate extends PrivateClass {
+//   myMethod() {
+//     this.privateMethod()
+//   }
+// }
+
+/**
+ * TODO: Static Members
+ * ´Podemos criar propriedades e métodos estáticos em classes
+ * Isso faz com que o acesso ou a utilização não dependam de objetos
+ * Podemos utilizar a partir da própria classe
+ */
+class StaticMembers {
+  static prop = "Teste static"
+
+  static staticMethod() {
+    console.log("Este método é static!")
+  }
+}
+
+console.log(StaticMembers.prop)
+
+StaticMembers.staticMethod()
+
+/**
+ * TODO: Generic Class
+ * Podemos criar classes com tipos genericos
+ * As propriedades dos argumentos podem ter os tipos definidos na hora da criação da instância
+ * Isso nos permite maior flexibilidade em uma classe
+ */
+class Item<T, U> {
+  first
+  second
+
+  constructor(first: T, second: U) {
+    this.first = first
+    this.second = second
+  }
+
+  get showFirst() {
+    return `O first é: ${this.first}`
+  }
+}
+
+const newItem = new Item("caixa", "surpresa")
+
+console.log(newItem.showFirst)
+
+
+/**
+ * TODO: Parameters Properties
+ * Parameters properties é um recurso para definir a privacidade, nome e tipos das propriedades no constructor
+ */
+class ParameterClass {
+  constructor(public name: string, private qty: number, private price: number) {
+    this.name = name
+    this.qty = qty
+  }
+
+  get showQty() {
+    return `Qtd total: ${this.qty}` 
+  }
+
+  get showPrice() {
+    return `Preço: R$${this.price}`
+  }
+}
+
+const newShirt = new ParameterClass("Camisa", 5, 19.99)
+
+console.log(newShirt.showQty)
+
+// console.log(newShirt.qty)
+
+/**
+ * TODO: Class Expressions
+ * É um recurso para criar uma classe anônima
+ * Também pode usar generics junto desse recurso
+ * Encapsula a classe em uma variável
+ */
+const myClass = class<T> {
+  name
+
+  constructor (name: T) {
+    this.name = name
+  }
+} 
+
+const pessoa = new myClass("Jones")
+
+console.log(pessoa.name)
+
+/**
+ * TODO: Abstract Class
+ * É um recurso para servir como molde de outra classe
+ * Os métodos dela devem ser implementados nas classes que a herdam
+ * Não podemos instanciar objetos a partir dessas classes 
+ */
+abstract class AbstractTest {
+  abstract showName(): void
+}
+
+// const newObj = new AbstractTest()
+
+class AbstractExample extends AbstractTest {
+  name: string
+
+  constructor(name: string) {
+    super()
+    this.name = name
+  }
+
+  showName() {
+    console.log(`O nome é: ${this.name}`)
+  }
+}
+
+const newObjAbstract = new AbstractExample("Josias")
+
+newObjAbstract.showName()
+
+/**
+ * TODO: Relação entre Classes
+ * Pode-se criar um objeto com base em outra classe
+ * Quando as classes são idênticas o TS não acusa erros
+ * Precisamos que as duas sejam exatamente iguais
+ */
+class Dog {
+  name!: string
+}
+
+class Cat {
+  name!: string
+}
+
+const doguinho: Dog = new Cat()
